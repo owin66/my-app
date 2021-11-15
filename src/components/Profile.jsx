@@ -1,8 +1,10 @@
 import React from 'react';
+import c from './Profile.module.css'
+
 
 const Profile = () => {
    return ( 
-   <div className="content">
+   <div className={c.content}>
     <img alt='logo main' src='https://pbs.twimg.com/profile_banners/2577526642/1487186854/1500x500'></img>
   <div>
     ava + description
@@ -11,9 +13,9 @@ const Profile = () => {
     My posts
     <div>New post</div>
   </div>
-  <div>
-    <div>post1</div>
-    <div>post2</div>
+  <div className = {c.posts}>
+    <div className = {`${c.item} ${c.gold}`}>post1</div>
+    <div className ={c.item}>post2</div>
     </div>
     </div>)
 }
