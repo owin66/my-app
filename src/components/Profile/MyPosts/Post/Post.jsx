@@ -1,12 +1,12 @@
 import React from 'react';
 import c from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
     return(
         <div className ={c.item}>
             <img alt='ava' src ='https://forum.minecraft-galaxy.ru/img/avatars/13295'></img>
-            post1
-            <div><span>like</span></div>
+            {props.message}
+            <div><span>{props.likes}</span></div>
             </div>
         )
 };
