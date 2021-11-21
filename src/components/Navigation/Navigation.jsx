@@ -7,18 +7,18 @@ const Navigation = () => {
     return (
         <nav className={c.nav}>
         <div className={c.item}>
-          <a href='#s'>Profile</a>
+          <a href='/profile'>Profile</a>
         </div>
         <div className={c.item}>
-          <a href='#s'>Messages</a>
+          <a href='dialogs'>Messages</a>
         </div>
         <div className={c.item}>
-          News
+          <a href='/news'>News</a>
         </div>
         <div className={c.item}>
-          <a href='#s'>Music</a>
+          <a href ='/music'>Music</a>
           <div className={c.item}>
-            <a href='#s'>Settings</a>
+            <a href ='/settings'>Settings</a>
           </div>
         </div>
       </nav>
