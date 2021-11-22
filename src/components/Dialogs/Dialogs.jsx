@@ -5,37 +5,47 @@ import {NavLink} from "react-router-dom";
 const DialogItems = (props) => {
     let path = '/dialogs/' + props.id;
     return (
-            <div className={c.dialog + ' ' + c.active}>
-                <NavLink to={path}>{props.name}</NavLink>
-            </div>
+        <div className={c.dialog + ' ' + c.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
 
     )
 }
 
-const Message = (props) =>{
+const Message = (props) => {
     return (
         <div className={c.dialogs}>{props.message}</div>
     )
 }
 
 const Dialogs = (props) => {
-    return (<div>
-        <div className={c.dialogs}>
-            <div className={c.dialogsItems}>
-                <DialogItems name ='Dimich' id='1' />
-                <DialogItems name ='Andrey' id='2' />
-                <DialogItems name ='Sasha' id='3' />
-                <DialogItems name ='Sveta' id='4' />
-                <DialogItems name ='Victor' id='5' />
-                <DialogItems name ='Valera' id='6' />
-            </div>
-            <div className={c.messages}>
-                <Message message='Hi' />
-                <Message message='How are you?' />
-                <Message message='yo' />
-                <Message message='yo' />
-                <Message message='yo' />
-            </div>
+    let dialogsData = [
+        {id: 1, name: 'Dimich'},
+        {id: 2, name: 'Andrey'},
+        {id: 3, name: 'Sasha'},
+        {id: 4, name: 'Sveta'},
+        {id: 5, name: 'Victor'},
+        {id: 6, name: 'Valera'}
+    ];
+    let messagesData = [
+        {id: 1, message: 'Hi'},
+        {id: 2, message: 'How are you?'},
+        {id: 3, message: 'yo'},
+        {id: 4, message: 'yo'},
+        {id: 5, message: 'yo'},
+    ];
+    return (
+        <div>
+            <div className={c.dialogs}>
+                <div className={c.dialogsItems}>
+                    <DialogItems name={dialogsData[0].name} id={dialogsData[0].id}/>
+                    <DialogItems name={dialogsData[1].name} id={dialogsData[1].id}/>
+
+                </div>
+                <div className={c.messages}>
+                    <Message message={messagesData[0].message}/>
+                    <Message message={messagesData[1].message}/>
+                </div>
             </div>
         </div>
     )
