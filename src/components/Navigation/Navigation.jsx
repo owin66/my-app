@@ -1,6 +1,7 @@
 import React from 'react';
 import c from './Navigation.module.css'
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
 
 
 const Navigation = () => {
@@ -19,6 +20,9 @@ const Navigation = () => {
                 <NavLink to='/music'>Music</NavLink>
                 <div className={c.item}>
                     <NavLink to='/settings'>Settings</NavLink>
+                </div>
+                <div className={c.item}>
+                    <NavLink to='/friens'><Friends /></NavLink>
                 </div>
             </div>
         </nav>
