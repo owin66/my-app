@@ -10,7 +10,6 @@ import state from "./redux/state";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
             <div className='wrapper'>
                 <Header/>
                 <Navigation/>
@@ -27,7 +26,6 @@ const App = (props) => {
                     </Routes>
                 </div>
             </div>
-        </BrowserRouter>
     );
 }
 
