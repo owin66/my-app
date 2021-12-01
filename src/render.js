@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import {addPost} from "./redux/state.jsx";
+import {addPost, updateNewPostText} from "./redux/state.jsx";
 
 
 let rerenderEntireTree = (state) => {
@@ -13,7 +13,8 @@ let rerenderEntireTree = (state) => {
                 <App posts={state.profilePage.posts}
                      dialogs={state.dialogsPage.dialogs}
                      messages={state.dialogsPage.messages}
-                     addPost={addPost} />
+                     addPost={addPost}
+                     updateNewPostText={updateNewPostText}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
