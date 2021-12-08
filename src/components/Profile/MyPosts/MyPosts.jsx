@@ -1,7 +1,7 @@
 import React from 'react';
 import c from './MyPosts.module.css';
 import Post from './Post/Post';
-import {updateNewPostText} from "../../../redux/state";
+import store, {updateNewPostText} from "../../../redux/state";
 
 const MyPosts = (props) => {
 
@@ -14,7 +14,7 @@ const MyPosts = (props) => {
     }
     let onPostChenge = () => {
         let text = newPostElement.current.value;
-        updateNewPostText(text)
+    props.updateNewPostText(text)
     }
     return (<div>
             <div className={c.postsBlock}>
