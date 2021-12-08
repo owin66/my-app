@@ -32,7 +32,6 @@ let store = {
         console.log('state');
     },
     getState() {
-        debugger
         return this._state;
     },
     addPost() {
@@ -46,7 +45,6 @@ let store = {
         this._callSubscriber(this._state);
     },
     updateNewPostText(newText) {
-        debugger
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
     },

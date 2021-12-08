@@ -14,7 +14,7 @@ const MyPosts = (props) => {
     }
     let onPostChenge = () => {
         let text = newPostElement.current.value;
-    props.updateNewPostText(text)
+    store.updateNewPostText(text)
     }
     return (<div>
             <div className={c.postsBlock}>
