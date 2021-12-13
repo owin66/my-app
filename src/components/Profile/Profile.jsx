@@ -8,8 +8,8 @@ import state, {updateNewPostText} from "../../redux/state";
 const Profile = (props) => {
     return (
         <div>
-            <ProfileInfo />
-            <MyPosts posts = {props.profilePage.posts}
+            <ProfileInfo/>
+            <MyPosts posts={props.profilePage.posts}
                      newPostText={props.newPostText}
                      dispatch={props.dispatch}/>
         </div>
