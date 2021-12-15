@@ -22,7 +22,7 @@ const Navigation = () => {
                     <NavLink to='/settings'>Settings</NavLink>
                 </div>
                 <div className={c.item}>
-                    <NavLink to='/friens'><Friends /></NavLink>
+                    <NavLink to='/friends'><Friends /></NavLink>
                 </div>
             </div>
         </nav>
